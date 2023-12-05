@@ -1,1 +1,1 @@
-# Neural-Network-and-Fuzzy-Systems
+"Neural Network and Fuzzy System" is one of the academic courses that I enjoyed very much. Since i already had a habit of making things from the scratch with programming languages , so with that coding skill , I successfully implmented raw code of Single Perceptron , Multi Layer Perceptron , Khonen and Hopfield neural network.
