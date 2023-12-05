@@ -1,0 +1,53 @@
+import numpy as np
+from collections import Counter
+
+class KNN:
+    def __init__(self, k=3):
+        self.k = k
+
+    def fit(self, X_train, y_train):
+        self.X_train = X_train
+        self.y_train = y_train
+
+    def predict(self, X_test):
+        y_pred = []
+        for x in X_test:
+            # Calculate distances between x and each training data point
+            distances = [np.linalg.norm(x - x_train) for x_train in self.X_train]
+
+            # Get indices of k nearest neighbors
+            k_indices = np.argsort(distances)[:self.k]
+
+            # Get labels of k nearest neighbors
+            k_labels = [self.y_train[i] for i in k_indices]
+
+            # Get the most common label among k nearest neighbors
+            most_common = Counter(k_labels).most_common(1)
+            y_pred.append(most_common[0][0])
+
+        return y_pred
+
+# Load iris dataset
+from sklearn.datasets import load_iris
+iris = load_iris()
+X = iris.data
+y = iris.target
+
+# Split the dataset into training and test sets
+train_idx = np.random.choice(len(X), size=100, replace=False)
+test_idx = np.random.choice(len(X), size=50, replace=False)
+
+X_train = X[train_idx]
+y_train = y[train_idx]
+X_test = X[test_idx]
+y_test = y[test_idx]
+
+# Create KNN classifier and fit the training data
+clf = KNN(k=3)
+clf.fit(X_train, y_train)
+
+# Predict the test data
+y_pred = clf.predict(X_test)
+
+# Print the accuracy score
+print('Accuracy:', sum(y_pred == y_test) / len(y_pred))

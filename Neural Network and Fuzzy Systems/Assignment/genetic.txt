@@ -1,0 +1,71 @@
+1. dataset generation (30 row , 20 columns , 0 or 1)
+2. sort the dataset in ascending order according to fitness function ==> corresponding integer value
+ . print minimum fitness and efficiency = 1/fitness
+3. first 15 dataset is sent to reproduction
+4. crossover (split) ==> only select one child
+5. mutant () ==> select any bit and alter it
+6. new child got , add in newpopulation
+7. continue from 4 to 6 15 times
+8. old popaltion (30) = new population (15)
+
+1 -> 30
+2 -> 15
+3 -> 8
+4 -> 4
+2
+1
+
+
+## Inititalizing Wij , bj , Wjk and bk with random values
+
+## Initializing Oi , netj , Oj and netk with 0
+
+In conclusion, backpropagation is a powerful and widely used algorithm for training neural networks. It addresses the challenge of optimizing the network's weights to minimize the error between predicted and target outputs. Backpropagation, combined with gradient descent optimization, enables deep neural networks to learn complex patterns and make accurate predictions in various domains.
+
+Training Input No. 	    Output node
+	 0 			 7
+	 1 			 13
+	 2 			 8
+	 3 			 11
+	 4 			 4
+	 5 			 4
+	 6 			 5
+	 7 			 18
+	 8 			 1
+	 9 			 19
+	 10 			 3
+	 11 			 9
+	 12 			 15
+	 13 			 10
+	 14 			 2
+	 15 			 14
+	 16 			 12
+	 17 			 6
+	 18 			 12
+	 19 			 17
+
+
+
+ Testing Input No. 	    Output node
+	 20 			 12
+	 21 			 4
+	 22 			 0
+	 23 			 18
+	 24 			 1
+	 25 			 19
+	 26 			 8
+	 27 			 3
+	 28 			 15
+	 29 			 10
+	 30 			 2
+	 31 			 14
+
+
+In conclusion, the Kohonen neural network, also known as the Self-Organizing Map (SOM), is a powerful unsupervised learning algorithm that can discover and represent the underlying structure of complex data. It offers a unique approach to clustering and visualizing high-dimensional data in a lower-dimensional space. 
+
+
+
+he Hopfield neural network is a type of recurrent neural network (RNN) that is capable of storing and retrieving patterns or memories. It provides a unique approach to associative memory and pattern recognition tasks
+
+
+The Hopfield network is designed to converge to stable states or attractors. Each stored pattern in the network corresponds to an attractor state, and the network dynamics converge to one of these states during recall. This convergence property allows the network to recognize and complete partial or noisy input patterns.
